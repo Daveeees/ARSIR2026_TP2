@@ -43,7 +43,7 @@ public class ServeurFTP {
         Socket socketDonnees = null;
         ServerSocket serveurDonnees = null;
 
-        File dossierData = new File("ARSIR2026_TP2/Data");
+        File dossierData = new File("Data");
         File dossierCourant = dossierData;
 
         try {
@@ -290,6 +290,8 @@ public class ServeurFTP {
 
                         sortieFichier.flush();
                         lectureFichier.close();
+                        socketDonnees.close();
+
 
                         fluxSortie.writeObject("200 Fichier envoyé");
                         fluxSortie.flush();

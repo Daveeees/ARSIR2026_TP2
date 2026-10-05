@@ -164,6 +164,7 @@ public class ClientFTP {
                     }
 
                     fichier.close();
+                    socketDonnees.close();
 
                     reponse = (String) fluxEntree.readObject();
 

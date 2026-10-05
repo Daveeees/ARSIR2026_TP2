@@ -364,6 +364,7 @@ public class ServeurFTP {
 
                         sortieFichier.flush();
                         lectureFichier.close();
+                        socketDonnees.close();
 
                         fluxSortie.writeObject("200 Fichier envoyé");
                         fluxSortie.flush();
